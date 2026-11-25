@@ -315,7 +315,9 @@ class _WardrobePageState extends State<WardrobePage> {
       },
     );
 
-    nameController.dispose();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      nameController.dispose();
+    });
 
     if (result == null) return;
 

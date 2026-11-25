@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'pages/wardrobe_page.dart';
+import 'pages/create_outfit_page.dart';
 
 void main() {
   runApp(const ClosetlyApp());
@@ -52,7 +53,7 @@ class _MainNavigationState extends State<MainNavigation> {
   late final List<Widget> pages = [
     HomePage(onNavigate: changePage),
     const WardrobePage(),
-    const CreatePage(),
+    const CreateOutfitPage(),
     const ExplorePage(),
     const ProfilePage(),
   ];
