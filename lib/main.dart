@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'pages/wardrobe_page.dart';
 import 'pages/create_outfit_page.dart';
+import 'pages/outfit_calendar_page.dart';
 
 void main() {
   runApp(const ClosetlyApp());
@@ -54,7 +55,7 @@ class _MainNavigationState extends State<MainNavigation> {
     HomePage(onNavigate: changePage),
     const WardrobePage(),
     const CreateOutfitPage(),
-    const ExplorePage(),
+    const OutfitCalendarPage(),
     const ProfilePage(),
   ];
 
@@ -89,9 +90,12 @@ class _MainNavigationState extends State<MainNavigation> {
             label: 'Create',
           ),
           NavigationDestination(
-            icon: Icon(Icons.explore_outlined),
-            selectedIcon: Icon(Icons.explore, color: darkGreen),
-            label: 'Explore',
+            icon: Icon(Icons.calendar_month_outlined),
+            selectedIcon: Icon(
+              Icons.calendar_month,
+              color: darkGreen,
+            ),
+            label: 'Calendar',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
@@ -147,7 +151,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 25,
                 backgroundColor: softGreen,
                 child: Icon(
